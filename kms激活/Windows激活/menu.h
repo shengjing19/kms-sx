@@ -8,13 +8,14 @@ void gn();  //function.h
 void zdy();
 void qtm();
 void xz();
+void endkms();
 int main();
 
 //--------------------------正文------------------------------------
 void menu()
 {
 	int g;
-	printf("\n\t\t\t\t\t\t Kms 激活工具 v1.0.7");
+	printf("\n\t\t\t\t\t\t Kms 激活工具 v1.0.8");
 	printf("\n\t\t\t\t\t======================================");
 	printf("\n\t\t\t\t\t1.通用Kms激活\n");
 	printf("\n\t\t\t\t\t2.自定义激活\n");
@@ -32,6 +33,7 @@ void menu()
 	case 2:system("cls"); zdy(); system("cls"); main();
 	case 3: system("cls"); qtm(); system("cls"); main();
 	case 4: system("cls"); xz();
+	
 	}
 	
 }

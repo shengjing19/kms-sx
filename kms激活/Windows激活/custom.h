@@ -5,6 +5,7 @@
 void zdy();
 void ser();
 void xpr();
+void loclkms();
 void ipk(const char* cn);
 void skms(const char* ln);
 int main();
@@ -14,7 +15,7 @@ int main();
 
 void zdy1()
 {
-	char s[29];
+	char s[50];
 	printf("\n第二阶段\n");
 	printf("密钥格式XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\n");
 	printf("\t\t   请输入KMS激活密钥:");
@@ -27,7 +28,7 @@ void zdy1()
 	printf("\n检查激活状态\n");
 	Sleep(1000);
 	xpr();
-    F:
+F:
 	printf("\n输入0返回上一级：");
 	int c;
 	scanf("%d", &c);
@@ -44,7 +45,7 @@ void zdy1()
 
 void zdy2()   //用户自定义kms服务器与kms激活码激活
 {
-	char a[29];
+	char a[50];
 	printf("\n第一阶段\n");
 	printf("填写格式 网址:端口;如没有端口直接写网址\n");
 	printf("\t\t   请输入kms服务器地址");
@@ -58,15 +59,17 @@ void zdy()
 {
 	int a;
 	printf("自定义激活\n");
-	printf("\n\t\t\t\t\t1.用户自定义kms激活码激活\n");
-	printf("\n\t\t\t\t\t2.用户自定义kms服务器与kms激活码激活\n");
+	printf("\n\t\t\t\t\t1.离线Kms激活\n");
+	printf("\n\t\t\t\t\t2.用户自定义kms激活码激活\n");
+	printf("\n\t\t\t\t\t3.用户自定义kms服务器与kms激活码激活\n");
 	printf("\n\n\n\n\n\n输入0以返回\n");
 	printf("请选择所需操作的序号：");
 	scanf("%d", &a);
 	switch (a)
 	{
-	case 1:system("cls"); ser(); zdy1(); break;
-	case 2:system("cls"); zdy2(); break;
+	case 1:system("cls"); loclkms(); system("cls"); break;
+	case 2:system("cls"); ser(); zdy1(); break;
+	case 3:system("cls"); zdy2(); break;
 	case 0:system("cls"); main();
 	}
 

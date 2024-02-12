@@ -153,4 +153,31 @@ void xpr()
     }
     _pclose(pipe);
 }
+//----------------------------------------激活详细信息--------------------------------------------------
+void dlv()
+{
+    int line = 0;
+    printf("激活详细信息\n\n");
+    std::string zl = "cscript C:\\Windows\\System32\\slmgr.vbs /dlv ";
+    FILE* pipe = _popen(zl.c_str(), "r");
+    char BF[628];              //将读出的数据写入数组中
+    std::string ZH;           //倒数第二行数据
+    std::string SL;          //最后一行数据
+    while (fgets(BF, 128, pipe) != NULL)
+    {
+        if (line >= 5) // 从第六行开始读取
+        {
+            SL = BF;
+            if (line == 5) {
+                ZH = SL;
+            }
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+            printf("%s", SL.c_str());
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
+        }
+    line++;
+    }
+   
+    _pclose(pipe);
+}
 

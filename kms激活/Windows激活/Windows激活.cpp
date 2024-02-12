@@ -11,6 +11,9 @@
 #include "server.h"  //选择服务器
 #include "ms.h"      //提供在线状态与延时
 #include "kms.h"     //提供大部分KMS指令
+#include "localkms.h"     //提供离线KMS激活功能
+#include "color.h"     //提供颜色功能
+
 
 
 //--------------------------正文------------------------------------
@@ -18,8 +21,6 @@ int main()
 {
 	system("title 笙箫旧景 系统激活(kms)");
 	system("color 0B");
-	//printf("\t\t\t\t欢迎使用Windows激活工具 v1.0.7 \n");
-	//printf("注意：激活期间网络环境需通畅。\n");
 	menu(); //菜单函数
 }
 

@@ -47,6 +47,12 @@
     <ClInclude Include="custom.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="localkms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Windows激活.rc">
